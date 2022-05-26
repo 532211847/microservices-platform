@@ -32,7 +32,7 @@ public class ClientController {
     @GetMapping("/list")
     @ApiOperation(value = "应用列表")
     public PageResult<Client> list(@RequestParam Map<String, Object> params) {
-        return clientService.listClient(params, true);
+        return clientService.listClient(params, false);
     }
 
     @GetMapping("/{id}")
